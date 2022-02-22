@@ -50,3 +50,6 @@ driver.findElements(By.cssSelector("#kw")); // 用CSS選擇器來定位元素
 ```
 ### cucumber
 https://cucumber.io/docs/guides/overview/
+
+### Xpath
+https://www.w3schools.com/xml/xpath_syntax.asp
