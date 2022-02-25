@@ -56,4 +56,5 @@ driver.findElements(By.cssSelector("#kw")); // 用CSS選擇器來定位元素
 https://cucumber.io/docs/guides/overview/
 
 ### Xpath
-https://www.w3schools.com/xml/xpath_syntax.asp
+https://www.w3schools.com/xml/xpath_syntax.asp \
+https://devhints.io/xpath
