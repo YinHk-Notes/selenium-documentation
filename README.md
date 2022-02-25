@@ -1,5 +1,9 @@
-https://www.guru99.com/selenium-tutorial.html
+#### selenium package document
+https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/package-summary.html
 
+#### tutorial
+
+https://www.guru99.com/selenium-tutorial.html \
 https://www.tpisoftware.com/tpu/articleDetails/2284
 
 #### selenium 對網頁元素的控制
