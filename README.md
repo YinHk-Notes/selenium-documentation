@@ -40,6 +40,39 @@ element.isSelected();
 element.submit();
 ```
 
+#### alerts in browser
+```java
+//Wait for the alert to be displayed and store it in a variable
+Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+//Store the alert text in a variable
+String text = alert.getText();
+//Press the OK button
+alert.accept();
+```
+
+#### confirm box
+```java
+//Wait for the alert to be displayed
+wait.until(ExpectedConditions.alertIsPresent());
+//Store the alert in a variable
+Alert alert = driver.switchTo().alert();
+//Store the alert in a variable for reuse
+String text = alert.getText();
+//Press the Cancel button
+alert.dismiss();
+```
+
+#### Prompt
+Prompts are similar to confirm boxes, except they also include a text input
+```java
+/Wait for the alert to be displayed and store it in a variable
+Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+//Type your message
+alert.sendKeys("Selenium");
+//Press the OK button
+alert.accept();
+```
+
 #### selenium 提供了8種的定位方式
 ```java
 driver.findElement(By.id("elementId")); // 用元素的id屬性值來定位元素
