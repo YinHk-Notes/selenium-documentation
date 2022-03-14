@@ -12,7 +12,16 @@ https://www.tpisoftware.com/tpu/articleDetails/2284
 #### selenium 對網頁元素的控制
 ```java
 WebDriver driver = new ChromeDriver();
+//launching a browser is to open your website
 driver.get("https://www.google.com.tw/");
+//上一頁
+driver.navigate().back();
+//下一頁
+driver.navigate().forward();
+//refresh page
+driver.navigate().refresh();
+//Quitting the browser at the end of a session
+driver.quit();
 //定位網頁元素
 WebElement element = driver.findElement(By.name("q"));
 //對元素點擊
