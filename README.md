@@ -63,15 +63,15 @@ alert.dismiss();
 ```
 
 #### Prompt
-Prompts are similar to confirm boxes, except they also include a text input
+prompts are similar to confirm boxes, except they also include a text input
 ```java
-/Wait for the alert to be displayed and store it in a variable
+//Wait for the alert to be displayed and store it in a variable
 Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 //Type your message
 alert.sendKeys("Selenium");
 //Press the OK button
 alert.accept();
-```
+``` 
 
 #### selenium 提供了8種的定位方式
 ```java
