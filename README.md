@@ -62,7 +62,7 @@ String text = alert.getText();
 alert.dismiss();
 ```
 
-#### Prompt
+#### prompt
 prompts are similar to confirm boxes, except they also include a text input
 ```java
 //Wait for the alert to be displayed and store it in a variable
