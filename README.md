@@ -9,7 +9,7 @@ https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/package-summ
 https://www.guru99.com/selenium-tutorial.html \
 https://www.tpisoftware.com/tpu/articleDetails/2284
 
-#### selenium 對網頁元素的控制
+#### selenium(Java) 對網頁元素的控制
 ```java
 WebDriver driver = new ChromeDriver();
 //launching a browser is to open your website
