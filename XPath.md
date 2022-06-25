@@ -149,12 +149,14 @@ An axis represents a relationship to the context (current) node, and is used to 
 | h1 ~ #id | //h1/following-sibling::[@id="id"] |
 
 ### Operators
-**Comparison**
-//a[@id = "xyz"]
-//a[@id != "xyz"]
+**Comparison** \
+//a[@id = "xyz"] \
+//a[@id != "xyz"] \
 //a[@price > 25]
 
-
+**Logic (and/or)** \
+//div[@id="head" and position()=2] \
+//div[(x and y) or not(z)]
 
 
 
