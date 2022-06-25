@@ -115,5 +115,7 @@ driver.findElements(By.cssSelector("#kw")); // 用CSS選擇器來定位元素
 https://cucumber.io/docs/guides/overview/
 
 ### Xpath
+- XPath stands for XML Path Language
+- XPath can be used to navigate through elements and attributes in an XML document.
 https://www.w3schools.com/xml/xpath_syntax.asp \
 https://devhints.io/xpath
