@@ -121,6 +121,65 @@ js.executeScript("scrollBy(x, y)");  //scroll x and y by px
 js.executeScript("scrollBy(0, 1500)"); //scroll down by 1500px
 ```
 
+#### Working with windows and tabs
+```java
+//Get window handle
+driver.getWindowHandle();
+
+//Store the ID of the original window
+String originalWindow = driver.getWindowHandle();
+
+// Opens a new tab and switches to new tab
+driver.switchTo().newWindow(WindowType.TAB);
+
+// Opens a new window and switches to new window
+driver.switchTo().newWindow(WindowType.WINDOW);
+
+//Close the tab or window
+driver.close();
+
+//Switch back to the old tab or window
+driver.switchTo().window(originalWindow);
+
+//Access each dimension individually
+int width = driver.manage().window().getSize().getWidth();
+int height = driver.manage().window().getSize().getHeight();
+
+//Or store the dimensions and query them later
+Dimension size = driver.manage().window().getSize();
+int width1 = size.getWidth();
+int height1 = size.getHeight();
+
+//Set window size
+driver.manage().window().setSize(new Dimension(1024, 768));
+
+//Set window position
+//Move the window to the top left of the primary monitor
+driver.manage().window().setPosition(new Point(0, 0));
+
+//maximize window
+driver.manage().window().minimize();
+//minimise window
+driver.manage().window().minimize();
+
+//full screen
+driver.manage().window().fullscreen();
+
+```
+#### Execute JS sript
+```java
+//Creating the JavascriptExecutor interface object by Type casting
+JavascriptExecutor js = (JavascriptExecutor)driver;
+//Button Element
+WebElement button =driver.findElement(By.name("btnLogin"));
+//Executing JavaScript to click on element
+js.executeScript("arguments[0].click();", button);
+//Get return value from script
+String text = (String) js.executeScript("return arguments[0].innerText", button);
+//Executing JavaScript directly
+js.executeScript("console.log('hello world')");
+```
+
 #### Working with iFrames and frames
 ```html
 <div id="modal">
@@ -193,6 +252,24 @@ alert.sendKeys("Selenium");
 //Press the OK button
 alert.accept();
 ``` 
+
+#### TakeScreenshot
+```java
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.io.*;
+import org.openqa.selenium.*;
+
+public class SeleniumTakeScreenshot {
+    public static void main(String args[]) throws IOException {
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://www.example.com");
+        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, new File("./image.png"));
+        driver.quit();
+    }
+}
+```
 
 #### selenium 提供了8種的定位方式
 ```java
