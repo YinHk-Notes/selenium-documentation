@@ -48,7 +48,19 @@ element.isSelected();
 //對元素做FormSubmit的操控
 element.submit();
 ```
-#### Drag and Drop action
+#### drag and Drop action
+
+
+```java
+//action of click and hold 
+.clickAndHold(WebElement element)
+//move element without any click
+.moveToElement(WebElement element)
+//release the element
+.release(WebElement element)
+//build all the actions in drag and drop
+.build()
+```
 ```java
 //WebElement on which drag and drop operation needs to be performed
 WebElement fromElement = driver.findElement(By Locator of fromElement);
@@ -60,14 +72,27 @@ WebElement toElement = driver.findElement(By Locator of toElement);
 Actions builder = new Actions(driver);
 
 //Building a drag and drop action
-Action dragAndDrop = builder.clickAndHold(fromElement)
-.moveToElement(toElement)
-.release(toElement)
-.build();
+Action dragAndDrop = builder
+  .clickAndHold(fromElement)
+    .moveToElement(toElement)
+      .release(toElement)
+        .build();
 
 //Performing the drag and drop action
 dragAndDrop.perform();
 ```
+**OR**
+```java
+WebElement from = driver.findElement(By Locator of fromElement);  
+WebElement to = driver.findElement(By Locator of toElement);
+
+//Creating object of Actions class to build composite actions  
+Actions act = new Actions(driver);  
+
+//Performing the drag and drop action  
+act.dragAndDrop(from,to).build().perform(); 
+```
+
 
 #### select dropdown
 ```java
