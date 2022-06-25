@@ -332,7 +332,9 @@ driver.findElements(By.cssSelector("#kw")); // 用CSS選擇器來定位元素
 
 
 ### cucumber
-https://cucumber.io/docs/guides/overview/
+https://cucumber.io/docs/guides/overview/ \
+https://cucumber.io/docs/guides/10-minute-tutorial/#see-scenario-reported-as-failing
+
 
 ### Xpath
 - XPath stands for XML Path Language
