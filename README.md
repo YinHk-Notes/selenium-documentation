@@ -16,6 +16,8 @@ https://youtu.be/j7VZsCCnptM
 #### selenium(Java) 對網頁元素的控制
 ```java
 WebDriver driver = new ChromeDriver();
+//若瀏覽器安裝位置為預設則webDriver會自動搜尋path設定的位置，也可以使用System.setProperty 來指定路徑
+System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 //launching a browser is to open your website
 driver.get("https://www.google.com.tw/");
 //上一頁
