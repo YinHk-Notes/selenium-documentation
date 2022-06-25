@@ -27,6 +27,8 @@ driver.navigate().back();
 driver.navigate().forward();
 //refresh page
 driver.navigate().refresh();
+//Quitting the browser only
+driver.close();
 //Quitting the browser at the end of a session
 driver.quit();
 //定位網頁元素
