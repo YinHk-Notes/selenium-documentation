@@ -111,12 +111,15 @@ dropdown.selectByVisibleText(text);
 
 #### alerts in browser
 ```java
+//Using Alert class to first switch to or focus to the alert box  
+Alert alert = driver.switchTo().alert();
 //Wait for the alert to be displayed and store it in a variable
 Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 //Store the alert text in a variable
 String text = alert.getText();
-//Press the OK button
+//Press the OK/confirm/accept button
 alert.accept();
+
 ```
 
 #### confirm box
@@ -129,6 +132,8 @@ Alert alert = driver.switchTo().alert();
 String text = alert.getText();
 //Press the Cancel button
 alert.dismiss();
+//response text to the alert
+driver.switchTo().alert().sendKeys("Text");
 ```
 
 #### prompt
