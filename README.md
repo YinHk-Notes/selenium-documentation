@@ -20,6 +20,7 @@ WebDriver driver = new ChromeDriver();
 System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
 //launching a browser is to open your website
 driver.get("https://www.google.com.tw/");
+driver.navigate().to(URL);
 //上一頁
 driver.navigate().back();
 //下一頁
