@@ -121,6 +121,42 @@ js.executeScript("scrollBy(x, y)");  //scroll x and y by px
 js.executeScript("scrollBy(0, 1500)"); //scroll down by 1500px
 ```
 
+#### Working with iFrames and frames
+```html
+<div id="modal">
+  <iframe id="buttonframe" name="myframe"  src="https://seleniumhq.github.io">
+   <button>Click here</button>
+ </iframe>
+</div>
+```
+**Using a WebElement**
+```java
+/* Using a WebElement */
+//Store the web element
+WebElement iframe = driver.findElement(By.cssSelector("#modal>iframe"));
+//Switch to the frame
+driver.switchTo().frame(iframe);
+//Now we can click the button
+driver.findElement(By.tagName("button")).click();
+
+/* Using a name or ID */
+//Using the ID
+driver.switchTo().frame("buttonframe");
+//Or using the name instead
+driver.switchTo().frame("myframe");
+//Now we can click the button
+driver.findElement(By.tagName("button")).click();
+
+/* Using an index */
+// Switches to the second frame
+driver.switchTo().frame(1);
+
+/* Leaving a frame */
+// Return to the top level
+driver.switchTo().defaultContent();
+```
+
+
 #### alerts in browser
 ```java
 //Using Alert class to first switch to or focus to the alert box  
@@ -131,7 +167,6 @@ Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 String text = alert.getText();
 //Press the OK/confirm/accept button
 alert.accept();
-
 ```
 
 #### confirm box
