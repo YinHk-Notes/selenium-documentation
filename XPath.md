@@ -159,9 +159,9 @@ An axis represents a relationship to the context (current) node, and is used to 
 //div[(x and y) or not(z)]
 
 ### Indexing
-//a[1]                  # first <a> \
-//a[last()]             # last <a>  \
-//ol/li[2]              # second <li> \
+//a[1]                 
+//a[last()]             
+//ol/li[2]              
 //ol/li[position()=2]   # same as above \
 //ol/li[position()>1]   # :not(:first-of-type)
 
