@@ -5,7 +5,8 @@ https://www.selenium.dev/documentation/overview/
 https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/package-summary.html
 
 #### Install web driver
-[ChromeDriver - WebDriver for Chrome](https://sites.google.com/chromium.org/driver/)
+[ChromeDriver - WebDriver for Chrome](https://sites.google.com/chromium.org/driver/) \
+https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers/
 
 #### tutorial
 
