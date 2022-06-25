@@ -69,6 +69,21 @@ Action dragAndDrop = builder.clickAndHold(fromElement)
 dragAndDrop.perform();
 ```
 
+#### select dropdown
+```java
+WebElement testDropDown = driver.findElement(By.id("testingDropdown"));  
+Select dropdown = new Select(testDropDown);
+
+//3 methods for selecting item in the dropdown menu:
+
+//by index
+dropdown.selectByIndex(index);  
+//by value
+dropdown.selectByValue(value);
+//by text on the menu
+dropdown.selectByVisibleText(text);
+```
+
 #### alerts in browser
 ```java
 //Wait for the alert to be displayed and store it in a variable
