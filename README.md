@@ -51,7 +51,6 @@ element.submit();
 ```
 #### drag and Drop action
 
-
 ```java
 //action of click and hold 
 .clickAndHold(WebElement element)
@@ -107,6 +106,35 @@ dropdown.selectByIndex(index);
 dropdown.selectByValue(value);
 //by text on the menu
 dropdown.selectByVisibleText(text);
+```
+```java
+// Deselect an <option> based upon the <select> element's internal index
+selectObject.deselectByIndex(1);
+
+// Deselect an <option> based upon its value attribute
+selectObject.deselectByValue("value1");
+
+// Deselect an <option> based upon its text
+selectObject.deselectByVisibleText("Bread");
+
+// Deselect all selected <option> elements
+selectObject.deselectAll();
+```
+
+```java
+//find out if your <select> element can select multiple options 
+Boolean allowMulti = selectObject.isMultiple();
+```
+
+```java
+// Return a List<WebElement> of options that have been selected
+List<WebElement> allSelectedOptions = selectObject.getAllSelectedOptions();
+
+// Return a WebElement referencing the first selection option found by walking down the DOM
+WebElement firstSelectedOption = selectObject.getFirstSelectedOption();
+
+// Return a List<WebElement> of options that the <select> element contains
+List<WebElement> allAvailableOptions = selectObject.getOptions();
 ```
 
 #### scroll webpage
