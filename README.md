@@ -93,7 +93,6 @@ Actions act = new Actions(driver);
 act.dragAndDrop(from,to).build().perform(); 
 ```
 
-
 #### select dropdown
 ```java
 WebElement testDropDown = driver.findElement(By.id("testingDropdown"));  
@@ -107,6 +106,18 @@ dropdown.selectByIndex(index);
 dropdown.selectByValue(value);
 //by text on the menu
 dropdown.selectByVisibleText(text);
+```
+
+#### scroll webpage
+要捲動網頁，可使用JavaScript的scrollBy()方法。要執行JavaScript方法，還需要使用JavaScript執行器。 
+`scrollBy`方法根據畫素採用兩個引數，每個引數用於水平和垂直捲動。
+```java
+JavascriptExecutor js = (JavascriptExecutor)driver;  
+js.executeScript("scrollBy(x, y)");  //scroll x and y by px
+```
+**Eg**
+```java
+js.executeScript("scrollBy(0, 1500)"); //scroll down by 1500px
 ```
 
 #### alerts in browser
