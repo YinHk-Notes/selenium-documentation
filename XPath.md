@@ -111,6 +111,52 @@ An axis represents a relationship to the context (current) node, and is used to 
 | child::*/child::price | Selects all price grandchildren of the current node |
 
 
+### Descendant selectors
+| h1 | //h1 |
+| --- | --- |
+| div p | //div//p |
+| ul > li | //ul/li |
+| ul > li > a | //ul/li/a |
+| div > * | //div/* |
+| :root | / |
+| :root > body | /body |
+
+### Attribute selectors
+| #id | //*[@id="id"] |
+| --- | --- |
+| .class | //*[@class="class"] …kinda |
+| input[type="submit"] | //input[@type="submit"] |
+| a#abc[for="xyz"] | //a[@id="abc"][@for="xyz"] |
+| a[rel] | //a[@rel] |
+| a[href^='/'] | //a[starts-with(@href, '/')] |
+| a[href$='pdf'] | //a[ends-with(@href, '.pdf')] |
+| a[href*='://'] | //a[contains(@href, '://')] |
+| a[rel~='help'] | //a[contains(@rel, 'help')] …kinda |
+
+### Order selectors
+| ul > li:first-of-type | //ul/li[1] |
+| --- | --- |
+| ul > li:nth-of-type(2) | //ul/li[2] |
+| ul > li:last-of-type | //ul/li[last()] |
+| li#id:first-of-type | //li[1][@id="id"] |
+| a:first-child | //*[1][name()="a"] |
+| a:last-child | //*[last()][name()="a"] |
+
+### Siblings
+| h1 ~ ul | //h1/following-sibling::ul |
+| --- | --- |
+| h1 + ul | //h1/following-sibling::ul[1] |
+| h1 ~ #id | //h1/following-sibling::[@id="id"] |
+
+### Operators
+|Comparison|
+|//a[@id = "xyz"]|
+|//a[@id != "xyz"]|
+|//a[@price > 25]|
+
+
+
+
 
 
 
