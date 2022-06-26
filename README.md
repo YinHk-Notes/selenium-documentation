@@ -12,7 +12,7 @@ https://www.selenium.dev/documentation/webdriver/getting_started/install_drivers
 
 https://www.guru99.com/selenium-tutorial.html \
 https://www.tpisoftware.com/tpu/articleDetails/2284 \
-https://youtu.be/j7VZsCCnptM
+[https://youtu.be/j7VZsCCnptM](https://www.youtube.com/watch?v=aIfP8rOx66E)
 
 #### selenium(Java) 對網頁元素的控制
 ```java
